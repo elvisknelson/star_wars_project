@@ -10,16 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_05_224020) do
+ActiveRecord::Schema.define(version: 2020_10_08_170748) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "birth_year"
     t.string "gender"
-    t.string "homeworld"
-    t.string "species"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "homeworld_id", null: false
+    t.integer "species_id", null: false
+    t.index ["homeworld_id"], name: "index_characters_on_homeworld_id"
+    t.index ["species_id"], name: "index_characters_on_species_id"
+  end
+
+  create_table "homeworlds", force: :cascade do |t|
+    t.string "name"
+    t.integer "rotation_period"
+    t.string "climate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "species", force: :cascade do |t|
+    t.string "name"
+    t.string "classification"
+    t.string "designation"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "vehicles", force: :cascade do |t|
+    t.string "name"
+    t.string "model"
+    t.string "pilot"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "characters", "homeworlds"
+  add_foreign_key "characters", "species"
 end
