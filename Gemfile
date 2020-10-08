@@ -5,6 +5,8 @@ ruby '2.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
+# Bootstrap
+gem 'bootstrap'
 # Http Party
 gem 'httparty'
 # Use sqlite3 as the database for Active Record
