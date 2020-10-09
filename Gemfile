@@ -7,6 +7,9 @@ ruby '2.7.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 # Bootstrap
 gem 'bootstrap'
+# Pagination
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
 # Http Party
 gem 'httparty'
 # Use sqlite3 as the database for Active Record
