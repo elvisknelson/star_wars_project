@@ -10,7 +10,7 @@
       <% @homeworlds.each do |world| %>
       <tr>
         <th scope="row"><%= world.id %></th>
-        <th><%= link_to world.name, homeworld_path(world.id), class: "nav-link" %></th>
+        <th><%= link_to world.name, homeworld_path(world), class: "nav-link" %></th>
         <th><%= world.rotation_period %></th>
         <th><%= world.climate.capitalize() %></th>
       </tr>

@@ -10,7 +10,7 @@
       <% @characters.each do |character| %>
       <tr>
         <th scope="row"><%= character.id %></th>
-        <th><%= link_to character.name, character_path(character.id), class: "nav-link" %></th>
+        <th><%= link_to character.name, character_path(character), class: "nav-link" %></th>
         <th><%= character.species.name %></th>
         <th><%= character.homeworld.name.capitalize() %></th>
       </tr>
