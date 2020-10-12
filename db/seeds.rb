@@ -51,7 +51,8 @@ loop do
   end
   homeworld_id = Homeworld.where(name: "#{homeworld_name}").first
 
-  char = Character.create(name: character['name'], gender: character['gender'], birth_year: character['birth_year'], species_id: species_id.id, homeworld_id: homeworld_id.id)
+  char = Character.create(name: character['name'], gender: character['gender'], birth_year: character['birth_year'], species_id: species_id.id, homeworld_id: homeworld_id.id,
+                          mass: character['mass'], hair_color: character['hair_color'], skin_color: character['skin_color'], eye_color: character['eye_color'], height: character['height'])
 
   if i == 82
     break
