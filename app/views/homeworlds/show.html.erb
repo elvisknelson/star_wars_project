@@ -1,0 +1,11 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div class="card text-white bg-dark">
+      <h1 class="card-header">Name: <%= @homeworlds.name %></h1>
+      <div class="card-body">
+        <p class="card-text"><strong>Rotation Period:</strong> <%= @homeworlds.rotation_period %></p>
+        <p class="card-text"><strong>Climate:</strong> <%= @homeworlds.climate.capitalize() %></p>
+      </div>
+    </div>
+  </div>
+</div>
