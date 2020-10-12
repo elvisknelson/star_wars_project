@@ -1,2 +1,18 @@
-<h1>Characters#show</h1>
-<p>Find me in app/views/characters/show.html.erb</p>
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div class="card text-white bg-dark">
+      <h1 class="card-header">Name: <%= @character.name %></h1>
+      <div class="card-body">
+        <p class="card-text"><strong>Species:</strong> <%= @character.species.name %></p>
+        <p class="card-text"><strong>Gender:</strong> <%= @character.gender.capitalize() %></p>
+        <p class="card-text"><strong>Homeworld:</strong> <%= @character.homeworld.name.capitalize() %></p>
+        <p class="card-text"><strong>Birth Year:</strong> <%= @character.birth_year.capitalize() %></p>
+        <p class="card-text"><strong>Mass:</strong> <%= @character.mass %> Kg</p>
+        <p class="card-text"><strong>Hair Color:</strong> <%= @character.hair_color.capitalize() %></p>
+        <p class="card-text"><strong>Skin Color:</strong> <%= @character.skin_color.capitalize() %></p>
+        <p class="card-text"><strong>Eye Color:</strong> <%= @character.eye_color.capitalize() %></p>
+        <p class="card-text"><strong>Height:</strong> <%= @character.height %> Cm</p>
+      </div>
+    </div>
+  </div>
+</div>
