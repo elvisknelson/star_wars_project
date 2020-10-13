@@ -4,11 +4,17 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Name</th>
+        <th scope="col">Classification</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Average Height</th>
       </tr>
       <% @species.each do |spec| %>
       <tr>
         <th scope="row"><%= spec.id %></th>
         <th><%= link_to spec.name, species_url(spec), class: "nav-link" %></th>
+        <th><%= spec.classification %></th>
+        <th><%= spec.designation %></th>
+        <th><%= spec.average_height %></th>
       </tr>
       <% end %>
     </table>

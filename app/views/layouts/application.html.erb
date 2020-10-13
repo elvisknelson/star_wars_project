@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Star Wars</title>
     <%= csrf_meta_tags %>
@@ -10,6 +10,35 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Star Wars Wiki</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item <%= 'active' if current_page?(root_path) %>">
+            <%= link_to 'Characters', root_path, class: "nav-link" %>  <span class="sr-only">(current)</span>
+          </li>
+          <li class="nav-item <%= 'active' if current_page?(homeworlds_path) %>">
+            <%= link_to 'Homeworlds', homeworlds_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item <%= 'active' if current_page?(speciess_path) %>">
+            <%= link_to 'Species', speciess_path, class: "nav-link" %>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  <div class="row justify-content-center">
+    <div class="col-8 mt-5">
+      <h1 class="mb-5 row justify-content-center">Star Wars Wiki</h1>
+    </div>
+  </div>
+  <%= yield %>
   </body>
 </html>

@@ -5,6 +5,11 @@
       <div class="card-body">
         <p class="card-text"><strong>Rotation Period:</strong> <%= @homeworlds.rotation_period %></p>
         <p class="card-text"><strong>Climate:</strong> <%= @homeworlds.climate.capitalize() %></p>
+        <p class="card-text"><strong>Diameter:</strong> <%= @homeworlds.diameter %> Km</p>
+        <p class="card-text"><strong>Gravity:</strong> <%= @homeworlds.gravity %></p>
+        <p class="card-text"><strong>Terrain:</strong> <%= @homeworlds.terrain.capitalize() %></p>
+        <p class="card-text"><strong>Surface Water:</strong> <%= (@homeworlds.surface_water == '1') ? 'True' : 'False' %></p>
+        <p class="card-text"><strong>Population:</strong> <%= (@homeworlds.population == 0) ? 'Unknown' : @homeworlds.population %></p>
       </div>
     </div>
   </div>
