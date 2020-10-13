@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_12_193630) do
+ActiveRecord::Schema.define(version: 2020_10_12_193850) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
@@ -48,6 +48,9 @@ ActiveRecord::Schema.define(version: 2020_10_12_193630) do
     t.string "designation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "average_height"
+    t.string "language"
+    t.integer "average_lifespan"
   end
 
   add_foreign_key "characters", "homeworlds"
