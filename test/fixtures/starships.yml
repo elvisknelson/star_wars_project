@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  cargo_capacity: 1
+  consumables: MyString
+  crew: 1
+  hyperdrive_rating: 1.5
+  manufacturer: MyString
+  model: MyString
+
+two:
+  name: MyString
+  cargo_capacity: 1
+  consumables: MyString
+  crew: 1
+  hyperdrive_rating: 1.5
+  manufacturer: MyString
+  model: MyString
