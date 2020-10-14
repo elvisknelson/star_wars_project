@@ -1,8 +1,8 @@
-<h2 class="mb-5 row mr-0 ml-0 justify-content-center">Search Results</h2>
-<h3 class="mb-5 row mr-0 ml-0 justify-content-center"><u>Characters</u></h3>
 <div class="row mr-0 ml-0 justify-content-center">
   <div class="col-6">
+    <h2 class="mb-5 row mr-0 ml-0 justify-content-center">Search Results</h2>
     <ul>
+      <h3 class="mb-5 row mr-0 ml-0 justify-content-center"><u>Characters</u></h3>
       <% @characters.each do |character| %>
         <li><%= link_to character.name, character_path(character) %>
       <% end %>
