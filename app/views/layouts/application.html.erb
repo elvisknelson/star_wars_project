@@ -29,14 +29,14 @@
           </li>
         </ul>
         <%= simple_form_for :search, url: search_index_path, class: "form-inline my-2 my-lg-0", method: "GET", html: { class: 'form-inline' } do |f| %>
-          <%= f.input :name, input_html: {value: ""}, class: "form-control mr-sm-2", label: false %>
+          <%= f.input :name, input_html: {value: "", class: "mr-2 p-1"}, label: false %>
           <%= f.submit "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
         <% end %>
       </div>
     </nav>
-  <div class="row mr-0 ml-0 justify-content-center">
-    <div class="col-8 mt-5">
-    </div>
+    <div class="row mr-0 ml-0 justify-content-center">
+      <div class="col-8 mt-5">
+      </div>
   </div>
   <%= yield %>
   </body>
