@@ -5,5 +5,6 @@ class SpeciesController < ApplicationController
 
   def show
     @species = Species.find(params[:id])
+    @people = Character.where(species_id: @species.id)
   end
 end

@@ -5,5 +5,6 @@ class HomeworldsController < ApplicationController
 
   def show
     @homeworlds = Homeworld.find(params[:id])
+    @people = Character.where(homeworld_id: @homeworlds.id)
   end
 end

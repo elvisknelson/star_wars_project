@@ -8,6 +8,12 @@
         <p class="card-text"><strong>Average Height:</strong> <%= @species.average_height %> Cm</p>
         <p class="card-text"><strong>Language:</strong> <%= @species.language.capitalize() %></p>
         <p class="card-text"><strong>Average Lifespan:</strong> <%= @species.average_lifespan %> Years</p>
+        <p class="card-text"><strong>People:</strong></p>
+        <ul>
+        <% @people.each do |person| %>
+          <li class="card-text"><%= link_to person['name'], character_url(person.id), class: "" %> </li>
+        <% end %>
+        </ul>
       </div>
     </div>
   </div>

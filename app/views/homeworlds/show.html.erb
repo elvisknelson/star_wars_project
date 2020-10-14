@@ -10,6 +10,12 @@
         <p class="card-text"><strong>Terrain:</strong> <%= @homeworlds.terrain.capitalize() %></p>
         <p class="card-text"><strong>Surface Water:</strong> <%= (@homeworlds.surface_water == '1') ? 'True' : 'False' %></p>
         <p class="card-text"><strong>Population:</strong> <%= (@homeworlds.population == 0) ? 'Unknown' : @homeworlds.population %></p>
+        <p class="card-text"><strong>People:</strong></p>
+        <ul>
+        <% @people.each do |person| %>
+          <li class="card-text"><%= link_to person['name'], character_url(person.id), class: "" %> </li>
+        <% end %>
+        </ul>
       </div>
     </div>
   </div>
