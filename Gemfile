@@ -7,6 +7,8 @@ ruby '2.7.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 # Bootstrap
 gem 'bootstrap'
+# Faker
+gem 'faker'
 # Simple Form
 gem 'simple_form'
 # Pagination
