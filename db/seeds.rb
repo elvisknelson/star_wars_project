@@ -32,7 +32,7 @@ loop do
 end
 
 Homeworld.create(name: 'Undefined', rotation_period: -1, climate: 'Undefined', diameter: -1, gravity: 'Undefined',
-terrain: 'Undefined', surface_water: 0, population: -1)
+                 terrain: 'Undefined', surface_water: 0, population: -1)
 
 i = 0
 loop do
