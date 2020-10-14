@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root to: 'characters#index'
 
-  get 'about/index'
   get 'search/index'
+
+  get 'about', to: 'about#index'
 
   get 'characters', to: 'characters#index'
   resources 'characters', only: %i[index show]
