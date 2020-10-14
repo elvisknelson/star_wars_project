@@ -6,6 +6,7 @@ class SearchController < ApplicationController
       @characters = Character.where("name LIKE ?", "%#{@name}%")
       @homeworlds = Homeworld.where("name LIKE ?", "%#{@name}%")
       @species = Species.where("name LIKE ?", "%#{@name}%")
+      @starships = Starship.where("name LIKE ?", "%#{@name}%")
     end
   end
 end

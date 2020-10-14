@@ -1,2 +1,15 @@
-<h1>Starships#show</h1>
-<p>Find me in app/views/starships/show.html.erb</p>
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div class="card text-white bg-dark">
+      <h1 class="card-header">Name: <%= @starships.name %></h1>
+      <div class="card-body">
+        <p class="card-text"><strong>Cargo Capacity:</strong> <%= @starships.cargo_capacity %></p>
+        <p class="card-text"><strong>Consumables:</strong> <%= @starships.consumables %></p>
+        <p class="card-text"><strong>Crew:</strong> <%= @starships.crew %></p>
+        <p class="card-text"><strong>Hyperdrive Rating:</strong> <%= @starships.hyperdrive_rating %></p>
+        <p class="card-text"><strong>Manufacturer:</strong> <%= @starships.manufacturer.capitalize() %></p>
+        <p class="card-text"><strong>Model:</strong> <%= @starships.model.capitalize() %> </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,21 +1,41 @@
 <div class="row mr-0 ml-0 justify-content-center">
   <div class="col-6">
-    <h2 class="mb-5 row mr-0 ml-0 justify-content-center">Search Results</h2>
-    <ul>
-      <h3 class="mb-5 row mr-0 ml-0 justify-content-center"><u>Characters</u></h3>
-      <% @characters.each do |character| %>
-        <li><%= link_to character.name, character_path(character) %>
-      <% end %>
+    <h1 class="mb-5 row mr-0 ml-0 justify-content-center">Search Results</h1>
 
-      <h3 class="mb-5 row mr-0 ml-0 justify-content-center"><u>Homeworlds</u></h3>
-      <% @homeworlds.each do |world| %>
-        <li><%= link_to world.name, homeworld_path(world) %>
-      <% end %>
+    <div class="card text-white bg-dark">
+      <h3 class="card-header">Characters</h3>
+      <div class="card-body">
+        <% @characters.each do |character| %>
+          <p class="card-text"><%= link_to character.name, character_path(character) %></p>
+        <% end %>
+      </div>
+    </div>
 
-      <h3 class="mb-5 row mr-0 ml-0 justify-content-center"><u>Species</u></h3>
-      <% @species.each do |spec| %>
-        <li><%= link_to spec.name, species_url(spec) %>
-      <% end %>
-    </ul>
+    <div class="card text-white bg-dark mt-2">
+      <h3 class="card-header">Homeworlds</h3>
+      <div class="card-body">
+        <% @homeworlds.each do |world| %>
+          <p class="card-text"><%= link_to world.name, homeworld_path(world) %></p>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="card text-white bg-dark mt-2">
+      <h3 class="card-header">Species</h3>
+      <div class="card-body">
+        <% @species.each do |spec| %>
+          <p class="card-text"><%= link_to spec.name, species_url(spec) %></p>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="card text-white bg-dark mt-2 mb-4">
+      <h3 class="card-header">Starships</h3>
+      <div class="card-body">
+        <% @starships.each do |starship| %>
+          <p class="card-text"><%= link_to starship.name, starship_url(starship) %></p>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

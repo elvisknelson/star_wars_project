@@ -1,2 +1,24 @@
-<h1>Starships#index</h1>
-<p>Find me in app/views/starships/index.html.erb</p>
+<h1 class="mb-5 row mr-0 ml-0 justify-content-center">Species</h1>
+<div class="row mr-0 ml-0 justify-content-center">
+  <div class="col-8">
+    <table id="fullTable" class="table table-striped table-dark table-hover">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Model</th>
+        <th scope="col">Hyperdrive Rating</th>
+      </tr>
+      <% @starships.each do |starship| %>
+      <tr>
+        <th><%= link_to starship.id, starship_url(starship), class: "nav-link text-white" %></th>
+        <th><%= link_to starship.name, starship_url(starship), class: "nav-link text-white" %></th>
+        <th><%= link_to starship.model, starship_url(starship), class: "nav-link text-white" %></th>
+        <th><%= link_to starship.hyperdrive_rating, starship_url(starship), class: "nav-link text-white" %></th>
+      </tr>
+      <% end %>
+    </table>
+    <div class="flickr_pagination">
+      <%= will_paginate @starships, :container => false %>
+    </div>
+  </div>
+</div>
