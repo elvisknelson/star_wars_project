@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'characters#index'
 
+  get 'about/index'
   get 'search/index'
 
   get 'characters', to: 'characters#index'
