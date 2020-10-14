@@ -1,4 +1,5 @@
-<div class="row justify-content-center">
+<h1 class="mb-5 row mr-0 ml-0 justify-content-center">Characters</h1>
+<div class="row mr-0 ml-0 justify-content-center">
   <div class="col-8">
     <table id="fullTable" class="table table-striped table-dark table-hover">
       <tr>
@@ -9,10 +10,10 @@
       </tr>
       <% @characters.each do |character| %>
       <tr>
-        <th scope="row"><%= character.id %></th>
-        <th><%= link_to character.name, character_path(character), class: "nav-link" %></th>
-        <th><%= character.species.name %></th>
-        <th><%= character.homeworld.name.capitalize() %></th>
+        <th><%= link_to character.id, character_path(character), class: "nav-link text-white" %></th>
+        <th><%= link_to character.name, character_path(character), class: "nav-link text-white" %></th>
+        <th><%= link_to character.species.name, species_path(character.species), class: "nav-link text-white" %></th>
+        <th><%= link_to character.homeworld.name.capitalize(), homeworld_path(character.homeworld), class: "nav-link text-white" %></th>
       </tr>
       <% end %>
     </table>

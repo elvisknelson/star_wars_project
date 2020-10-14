@@ -1,4 +1,5 @@
-<div class="row justify-content-center">
+<h1 class="mb-5 row mr-0 ml-0 justify-content-center">Homeworlds</h1>
+<div class="row mr-0 ml-0 justify-content-center">
   <div class="col-8">
     <table id="fullTable" class="table table-striped table-dark table-hover">
       <tr>
@@ -9,10 +10,10 @@
       </tr>
       <% @homeworlds.each do |world| %>
       <tr>
-        <th scope="row"><%= world.id %></th>
-        <th><%= link_to world.name, homeworld_path(world), class: "nav-link" %></th>
-        <th><%= world.rotation_period %></th>
-        <th><%= world.climate.capitalize() %></th>
+        <th scope="row mr-0 ml-0"><%= link_to world.id, homeworld_path(world), class: "nav-link text-white" %></th>
+        <th><%= link_to world.name, homeworld_path(world), class: "nav-link text-white" %></th>
+        <th><%= link_to world.rotation_period, homeworld_path(world), class: "nav-link text-white" %></th>
+        <th><%= link_to world.climate.capitalize(), homeworld_path(world), class: "nav-link text-white" %></th>
       </tr>
       <% end %>
     </table>

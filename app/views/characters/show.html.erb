@@ -3,7 +3,7 @@
     <div class="card text-white bg-dark">
       <h1 class="card-header">Name: <%= @character.name %></h1>
       <div class="card-body">
-        <p class="card-text"><strong>Species:</strong> <%= @character.species.name %></p>
+        <p class="card-text"><strong>Species:</strong><%= link_to @character.species.name, species_path(@character.species.id), class: "nav-link d-inline" %></p>
         <p class="card-text"><strong>Gender:</strong> <%= @character.gender.capitalize() %></p>
         <p class="card-text"><strong>Homeworld:</strong> <%= @character.homeworld.name.capitalize() %></p>
         <p class="card-text"><strong>Birth Year:</strong> <%= @character.birth_year.capitalize() %></p>
