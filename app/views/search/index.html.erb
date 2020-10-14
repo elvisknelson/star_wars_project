@@ -1,0 +1,28 @@
+<h2 class="mb-5 row mr-0 ml-0 justify-content-center">Search Results</h2>
+<h3 class="mb-5 row mr-0 ml-0 justify-content-center"><u>Characters</u></h3>
+<div class="row mr-0 ml-0 justify-content-center">
+  <div class="col-8">
+    <ul>
+      <% @characters.each do |character| %>
+        <li><%= link_to character.name, character_path(character) %>
+        <%= link_to character.species.name, species_path(character.species) %>
+        <%= link_to character.homeworld.name.capitalize(), homeworld_path(character.homeworld) %></li>
+      <% end %>
+
+      <h3 class="mb-5 row mr-0 ml-0 justify-content-center"><u>Homeworlds</u></h3>
+      <% @homeworlds.each do |world| %>
+        <li><%= link_to world.name, homeworld_path(world) %>
+        <%= link_to world.rotation_period, homeworld_path(world) %>
+        <%= link_to world.climate.capitalize(), homeworld_path(world) %></li>
+      <% end %>
+
+      <h3 class="mb-5 row mr-0 ml-0 justify-content-center"><u>Species</u></h3>
+      <% @species.each do |spec| %>
+        <li><%= link_to spec.name, species_url(spec) %>
+        <%= link_to spec.classification.capitalize(), species_url(spec) %>
+        <%= link_to spec.designation.capitalize(), species_url(spec) %>
+        <%= link_to spec.average_height, species_url(spec) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
