@@ -11,7 +11,7 @@
       </tr>
       <% @species.each do |spec| %>
       <tr>
-        <th scope="row mr-0 ml-0"><%= spec.id %></th>
+        <th><%= link_to spec.id, species_url(spec), class: "nav-link text-white" %></th>
         <th><%= link_to spec.name, species_url(spec), class: "nav-link text-white" %></th>
         <th><%= link_to spec.classification.capitalize(), species_url(spec), class: "nav-link text-white" %></th>
         <th><%= link_to spec.designation.capitalize(), species_url(spec), class: "nav-link text-white" %></th>
